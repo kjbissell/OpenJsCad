@@ -1,10 +1,10 @@
  function main(params) {
- var cone = CSG.cylinder (
+ var cone = CSG.cylinder
     ({start: [0,0,0], end: [0,params.length,0], radiusStart:4, radiusEnd:2, resolution: 16});
 var inside = CSG.cylinder({start: [0,0,0], end: [0,9,0], radiusStart:3.5,radiusEnd:1, resolution: 16});
 cone = cone.subtract(inside);
 return cone;
-  )};
+  };
 
 function getParameterDefinitions() {
   return [
@@ -16,5 +16,3 @@ function getParameterDefinitions() {
     
   ];
 }
-
-
